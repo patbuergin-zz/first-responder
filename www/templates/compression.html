@@ -1,9 +1,24 @@
-<ion-view title="Herzdruckmassage">
+<ion-view title="Herzdruckmassage" ng-controller="CompressionController">
   <ion-content>
-    How To
-    Herzdruckmassage
+
+    <ion-slide-box slide-interval="2000" class="compression-slide-box" auto-play="true" does-continue="true">
+      <ion-slide>
+        <div class="box blue"> 1/3</div>
+      </ion-slide>
+
+      <ion-slide>
+        <div class="box blue"> 2/3</div>
+      </ion-slide>
+
+      <ion-slide>
+        <div class="box blue"> 3/3</div>
+      </ion-slide>
+
+    </ion-slide-box>
+
   </ion-content>
+
   <div class="button-footer">
-      <a class="button button-positive ion-checkmark single" href="#/compression"> Los!</a>
+      <a class="button button-positive ion-checkmark single" href="#/compression-guide"> Massage starten!</a>
   </div>
 </ion-view>

@@ -7825,3 +7825,7 @@ $ios-transition-box-shadow-end: -200px 0px 200px rgba(0,0,0,0.15), -5px 0px 5px 
     border-radius: 0; }
   .button-footer a.single {
     width: 100%; }
+
+.compression-slide-box {
+  width: 100%;
+  height: 400px; }

@@ -9,6 +9,8 @@ app.run(function($ionicPlatform, $rootScope) {
 
   $rootScope.position  = null;
 
+  $rootScope.countdownStartTime = null;
+
   $ionicPlatform.ready(function() {
     // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
     // for form inputs)
@@ -69,11 +71,21 @@ app.config(function($stateProvider, $urlRouterProvider) {
     .state('compression', {
       url: '/compression',
       templateUrl: 'templates/compression.html'
+    })
+    .state('compression-guide', {
+      url: '/compression-guide',
+      templateUrl: 'templates/compression-guide.html'
     });
 });
 
 
 app.controller('SOSController', function($scope, $ionicNavBarDelegate, $rootScope) {
   console.log("In SosController");
+  
+});
+
+app.controller('CompressionController', function($scope, $ionicNavBarDelegate, $rootScope) {
+  console.log("In CanvasController");
+  $rootScope.countdownStartTime = Date.now();
   
 });
