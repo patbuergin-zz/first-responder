@@ -93,7 +93,7 @@ app.controller('CompressionGuideController', function($scope, $ionicNavBarDelega
   $scope.audio = audio;
   $scope.radius = 0;
   $scope.opacity = 1;
-  var myMedia = new Media("sound/bass.ogg");
+  //var myMedia = new Media("sound/bass.ogg");
   window.setInterval(function() {
     var cDT = new Date(Date.now() - $rootScope.countdownStartTime);
     var cDM = cDT.getMinutes();
