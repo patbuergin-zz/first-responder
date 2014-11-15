@@ -29,7 +29,6 @@ app.run(function($ionicPlatform, $rootScope) {
           var latLng = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
           geocoder.geocode({'latLng': latLng}, function(result, status){
             if(status === google.maps.GeocoderStatus.OK){
-              console.log("RES: ", result);
               $rootScope.$apply(function(){
                 console.log(result[0].formatted_address);
                 $rootScope.position = result[0].formatted_address;
@@ -91,17 +90,37 @@ app.controller('CompressionController', function($scope, $ionicNavBarDelegate, $
 });
 
 app.controller('CompressionGuideController', function($scope, $ionicNavBarDelegate, $rootScope) {
-  $scope.audio = audio;
+  //$scope.audio = audio;
   $scope.radius = 0;
   $scope.opacity = 1;
+  var myMedia = new Media("sound/bass.ogg");
   window.setInterval(function() {
+    var cDT = new Date(Date.now() - $rootScope.countdownStartTime);
+    var cDM = cDT.getMinutes();
+    var cDS = cDT.getSeconds();
+    $scope.countdownMin = cDT.getMinutes();
+    $scope.countdownSec = cDT.getSeconds();
+    if (cDS < 10) {
+      $scope.countdownSec = "0" + cDS;
+    } else {
+      $scope.countdownSec = cDS;
+    }
+
+    if (cDM < 10) {
+      $scope.countdownMin = "0" + cDM;
+    } else {
+      $scope.countdownMin = cDM;
+    }
+
     $scope.$apply(function(){
       $scope.radius = ($scope.radius + 20) % 200;
       $scope.opacity = (200 - $scope.radius) / 200;
-      if ($scope.radius == 0){
-        $scope.audio.pause();
-        $scope.audio.currentTime = 0;
-        $scope.audio.play();
+      if ($scope.radius == 0 && myMedia != null){
+        myMedia.stop();
+        myMedia.play();
+        //$scope.audio.pause();
+        //$scope.audio.currentTime = 0;
+        //$scope.audio.play();
       }
     });
   }, 600 / 10);

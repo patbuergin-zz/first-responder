@@ -1,6 +1,5 @@
 <ion-view title="Herzdruckmassage" ng-controller="CompressionGuideController">
   <ion-content>
-    {{radius}}
     <svg viewBox="0 0 200 200" style="width: 100%;">
       <circle cx="100"
               cy="100"
@@ -10,8 +9,15 @@
               fill-opacity="{{opacity}}"
       ></circle>
     </svg>
-    <audio controls id="audio">
-      <source src="sound/bass.mp3" type="audio/mp3">
+    <!--<
+    audio controls id="audio">
+      <source src="sound/bass.ogg" type="audio/ogg">
     </audio>
+  -->
+
+    <div class="countdown-timer">{{countdownMin + ":" + countdownSec}}</div>
   </ion-content>
+  <div class="button-footer">
+      <a class="button button-positive ion-checkmark single" href="#/"> Danke!</a>
+    </div>
 </ion-view>

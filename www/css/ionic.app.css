@@ -7826,9 +7826,32 @@ $ios-transition-box-shadow-end: -200px 0px 200px rgba(0,0,0,0.15), -5px 0px 5px 
   .button-footer a.single {
     width: 100%; }
 
-.compression-slide-box {
-  width: 100%;
-  height: 400px; }
-
 audio {
   display: none; }
+
+.countdown-timer {
+  width: 100%;
+  text-align: center;
+  font-size: 40px; }
+
+.compression-slide-box {
+  width: 100%;
+  height: 400px;
+  height: 350px; }
+  .compression-slide-box img {
+    padding-top: 50px;
+    width: 100%; }
+  .compression-slide-box .image-background {
+    z-index: 0;
+    position: absolute; }
+  .compression-slide-box .image-foreground {
+    z-index: 1;
+    position: absolute; }
+  .compression-slide-box .image-caption {
+    z-index: 2;
+    font-size: 25px;
+    width: 100%;
+    text-align: center;
+    text-transform: uppercase;
+    position: absolute;
+    padding-top: 20px; }
