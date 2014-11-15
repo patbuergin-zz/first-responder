@@ -81,11 +81,28 @@ app.config(function($stateProvider, $urlRouterProvider) {
 
 app.controller('SOSController', function($scope, $ionicNavBarDelegate, $rootScope) {
   console.log("In SosController");
-  
+
 });
 
 app.controller('CompressionController', function($scope, $ionicNavBarDelegate, $rootScope) {
   console.log("In CanvasController");
   $rootScope.countdownStartTime = Date.now();
-  
+
+});
+
+app.controller('CompressionGuideController', function($scope, $ionicNavBarDelegate, $rootScope) {
+  $scope.audio = audio;
+  $scope.radius = 0;
+  $scope.opacity = 1;
+  window.setInterval(function() {
+    $scope.$apply(function(){
+      $scope.radius = ($scope.radius + 20) % 200;
+      $scope.opacity = (200 - $scope.radius) / 200;
+      if ($scope.radius == 0){
+        $scope.audio.pause();
+        $scope.audio.currentTime = 0;
+        $scope.audio.play();
+      }
+    });
+  }, 600 / 10);
 });
