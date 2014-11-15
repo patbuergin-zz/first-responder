@@ -90,7 +90,7 @@ app.controller('CompressionController', function($scope, $ionicNavBarDelegate, $
 });
 
 app.controller('CompressionGuideController', function($scope, $ionicNavBarDelegate, $rootScope) {
-  //$scope.audio = audio;
+  $scope.audio = audio;
   $scope.radius = 0;
   $scope.opacity = 1;
   var myMedia = new Media("sound/bass.ogg");
@@ -115,12 +115,12 @@ app.controller('CompressionGuideController', function($scope, $ionicNavBarDelega
     $scope.$apply(function(){
       $scope.radius = ($scope.radius + 20) % 200;
       $scope.opacity = (200 - $scope.radius) / 200;
-      if ($scope.radius == 0 && myMedia != null){
-        myMedia.stop();
-        myMedia.play();
-        //$scope.audio.pause();
-        //$scope.audio.currentTime = 0;
-        //$scope.audio.play();
+      if ($scope.radius == 0){ //&& myMedia != null){
+        //myMedia.stop();
+        //myMedia.play();
+        $scope.audio.pause();
+        $scope.audio.currentTime = 0;
+        $scope.audio.play();
       }
     });
   }, 600 / 10);
