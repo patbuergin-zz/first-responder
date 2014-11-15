@@ -5,7 +5,10 @@
 // the 2nd parameter is an array of 'requires'
 var app = angular.module('starter', ['ionic']);
 
-app.run(function($ionicPlatform) {
+app.run(function($ionicPlatform, $rootScope) {
+
+  $rootScope.position  = null;
+
   $ionicPlatform.ready(function() {
     // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
     // for form inputs)
@@ -15,7 +18,28 @@ app.run(function($ionicPlatform) {
     if(window.StatusBar) {
       StatusBar.styleDefault();
     }
+
+    if (navigator.geolocation) {
+      console.log("Getting Position...");
+        navigator.geolocation.getCurrentPosition(function(position){
+          console.log("Got Pos!");
+          var geocoder = new google.maps.Geocoder();
+          var latLng = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
+          geocoder.geocode({'latLng': latLng}, function(result, status){
+            if(status === google.maps.GeocoderStatus.OK){
+              console.log("RES: ", result);
+              $rootScope.$apply(function(){
+                console.log(result[0].formatted_address);
+                $rootScope.position = result[0].formatted_address;
+              });
+            }
+          });
+        })
+    } else {
+        console.log("Geolocation is not supported by this browser.");
+    }
   });
+
 });
 
 app.config(function($stateProvider, $urlRouterProvider) {
@@ -46,4 +70,10 @@ app.config(function($stateProvider, $urlRouterProvider) {
       url: '/compression',
       templateUrl: 'templates/compression.html'
     });
+});
+
+
+app.controller('SOSController', function($scope, $ionicNavBarDelegate, $rootScope) {
+  console.log("In SosController");
+  
 });

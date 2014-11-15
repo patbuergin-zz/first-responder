@@ -1,10 +1,29 @@
-<ion-view title="SOS">
-  <ion-content>
-    Notruf absetzen.
-    <div class="row">
+<ion-view title="SOS" ng-controller="SOSController" ng-init="">
+  <ion-content class="padding">
+    <div class="row padding-bottom">
+      <div class="col-25">WER?</div>
+      <div class="col-75">"Ich heiße ..."</div>
+    </div>
+
+    <div class="row padding-bottom">
+      <div class="col-25">WAS?</div>
+      <div class="col-75">Beschreiben Sie die Situation und Zustand des Betroffenen</div>
+    </div>
+
+    <div class="row padding-bottom">
+      <div class="col-25">WO?</div>
+      <div class="col-75">
+        <i class="ion-location"></i>
+        {{position}}
+      </div>
+    </div>
+    <div class="row padding-bottom">
       <div class="col">
-        <a class="button button-positive ion-checkmark button-full" href="#/compression"> OK</a>
+        <a class="button button-balanced button-large button-full ion-ios7-telephone" href="tel:112"> 112</a>
       </div>
     </div>
   </ion-content>
+  <div class="button-footer">
+      <a class="button button-positive ion-checkmark single" href="#/compression"> Bereits getan!</a>
+    </div>
 </ion-view>
