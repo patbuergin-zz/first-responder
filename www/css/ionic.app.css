@@ -7829,6 +7829,9 @@ $ios-transition-box-shadow-end: -200px 0px 200px rgba(0,0,0,0.15), -5px 0px 5px 
 audio {
   display: none; }
 
+img {
+  width: 100%; }
+
 .countdown-timer {
   width: 100%;
   text-align: center;
