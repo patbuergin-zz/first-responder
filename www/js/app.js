@@ -54,6 +54,10 @@ app.config(function($stateProvider, $urlRouterProvider) {
       url: '/',
       templateUrl: 'templates/consciousness.html'
     })
+    .state('info', {
+      url: '/info',
+      templateUrl: 'templates/info.html'
+    })
     .state('shake', {
       url: '/shake',
       templateUrl: 'templates/shake.html'
@@ -96,10 +100,6 @@ app.config(function($stateProvider, $urlRouterProvider) {
     });
 });
 
-
-app.controller('ConsciousnessController', function($scope, $ionicNavBarDelegate, $rootScope) {
-
-});
 app.controller('SOSController', function($scope, $ionicNavBarDelegate, $rootScope) {
   console.log("In SosController");
 
