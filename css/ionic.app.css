@@ -7844,6 +7844,21 @@ body, .pane {
   .button-footer a.single {
     width: 100%; }
 
+h1, h2, h3, h4, h5, h6 {
+  color: white; }
+
+div.disclaimer-text {
+  color: #6f6f6f;
+  font-size: 10px; }
+
+.button-xlarge {
+  padding: 0 16px;
+  min-width: 68px;
+  min-height: 72px;
+  font-size: 17px;
+  font-weight: bold;
+  line-height: 72px; }
+
 audio {
   display: none; }
 
@@ -7852,30 +7867,10 @@ img {
 
 .countdown-timer {
   width: 100%;
+  position: absolute;
+  top: 50px;
   text-align: center;
   font-size: 40px; }
-
-.compression-slide-box {
-  width: 100%;
-  height: 400px;
-  height: 350px; }
-  .compression-slide-box img {
-    padding-top: 50px;
-    width: 100%; }
-  .compression-slide-box .image-background {
-    z-index: 0;
-    position: absolute; }
-  .compression-slide-box .image-foreground {
-    z-index: 1;
-    position: absolute; }
-  .compression-slide-box .image-caption {
-    z-index: 2;
-    font-size: 25px;
-    width: 100%;
-    text-align: center;
-    text-transform: uppercase;
-    position: absolute;
-    padding-top: 20px; }
 
 .image-wrapper {
   background-image: url("../img/compression-bg.png");
@@ -7884,8 +7879,48 @@ img {
   margin: 0; }
   .image-wrapper > img {
     display: block; }
+  .image-wrapper.no-padding {
+    padding-top: 0; }
+  .image-wrapper.xtra-padding {
+    padding-top: 80px; }
+  .image-wrapper .wrapper-caption {
+    height: 80px;
+    line-height: 40px;
+    background: #454545;
+    text-align: center;
+    line-height: 80px;
+    width: 100%;
+    font-size: 20px; }
+
+.slider-pager {
+  bottom: 0;
+  top: 285px; }
+
+.card {
+  color: #444; }
+
+.button.button-positive {
+  background-color: #82C9A8;
+  border-color: #5eba8f; }
+
+.button.button-positive.active, .button.button-positive.activated {
+  background-color: #4db283;
+  border-color: #45a076; }
+
+.button.button-assertive {
+  background-color: #F15A24;
+  border-color: #d43f0e; }
+
+.button.button-assertive.active, .button.button-assertive.activated {
+  background-color: #bc380c;
+  border-color: #a4310b; }
 
 .instruction {
   padding: 48px 24px;
   font-size: 24px;
+  border-top: 3px solid #6f6f6f; }
+
+.instruction-small {
+  padding: 24px;
+  font-size: 20px;
   border-top: 3px solid #6f6f6f; }

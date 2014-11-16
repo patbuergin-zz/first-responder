@@ -1,20 +1,31 @@
-<ion-view title="SOS" ng-controller="SOSController">
+<ion-view title="Notruf" ng-controller="SOSController">
   <ion-content class="padding">
-    <div class="row padding-bottom">
-      <div class="col-25">WER?</div>
-      <div class="col-75">"Ich heiße ..."</div>
-    </div>
+    <h4>Rufen Sie einen Krankenwagen</h4>
 
-    <div class="row padding-bottom">
-      <div class="col-25">WAS?</div>
-      <div class="col-75">Beschreiben Sie die Situation und Zustand des Betroffenen</div>
-    </div>
+    <div class="card">
+      <div class="row padding-bottom">
+        <div class="col-25">WER?</div>
+        <div class="col-75">"Ich heiße ..."</div>
+      </div>
 
-    <div class="row padding-bottom">
-      <div class="col-25">WO?</div>
-      <div class="col-75">
-        <i class="ion-location"></i>
-        {{position}}
+      <div class="row padding-bottom">
+        <div class="col-25">WAS?</div>
+        <div class="col-75">
+          <ul>
+            <li>* Bewusstlose Person</li>
+            <li>* Keine Atmung feststellbar</li>
+          
+          </ul>
+      </div>
+      </div>
+
+      <div class="row padding-bottom">
+        <div class="col-25">WO?</div>
+        <div class="col-75">
+          <i class="ion-location"></i>
+          {{position}}
+          <div class="disclaimer-text">Aktuelle GPS-Position - Abweichungen möglich</div>
+        </div>
       </div>
     </div>
     <div class="row padding-bottom">
@@ -24,6 +35,6 @@
     </div>
   </ion-content>
   <div class="button-footer">
-      <a class="button button-positive ion-checkmark single" href="#/compression"> Bereits getan!</a>
+      <a class="button button-xlarge button-positive ion-checkmark single" href="#/compression"> Bereits getan!</a>
     </div>
 </ion-view>
