@@ -7921,12 +7921,21 @@ audio {
 img {
   width: 100%; }
 
+h5 {
+  position: absolute;
+  top: 60px;
+  text-transform: uppercase;
+  text-align: center;
+  width: 100%;
+  font-size: 12px; }
+
 .countdown-timer {
   width: 100%;
   position: absolute;
-  top: 50px;
+  top: 100px;
   text-align: center;
-  font-size: 40px; }
+  font-size: 48px;
+  font-weight: bold; }
 
 .image-wrapper {
   background-image: url("../img/compression-bg.png");
@@ -7945,7 +7954,9 @@ img {
     text-align: center;
     line-height: 80px;
     width: 100%;
-    font-size: 20px; }
+    font-size: 20px;
+    font-weight: 700;
+    border-bottom: 12px solid #6f6f6f; }
 
 .slider-pager {
   bottom: 0;
