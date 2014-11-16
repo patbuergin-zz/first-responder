@@ -30,6 +30,7 @@ body, .pane {
   text-transform: uppercase;
 
   a {
+    border-top-width: 6px;
     margin: 0;
     width: 50%;
     border-radius: 0;
@@ -37,8 +38,8 @@ body, .pane {
 
   a::before {
     display: block;
-    font-size: 40px;
-    top: 24px;
+    font-size: 38px;
+    top: 20px;
     position: relative;
   }
 
