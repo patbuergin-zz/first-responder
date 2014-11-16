@@ -233,8 +233,8 @@ audio {
   border-top: 3px solid #6f6f6f;
 }
 
-.scroll {
-  padding-bottom: 127px;
+.scroll > *:last-child {
+  margin-bottom: 127px;
 }
 
 .short {
