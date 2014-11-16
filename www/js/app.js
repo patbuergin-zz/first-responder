@@ -12,8 +12,6 @@ app.run(function($ionicPlatform, $rootScope) {
   $rootScope.countdownStartTime = null;
 
   $ionicPlatform.ready(function() {
-
-    console.log("IONIC READY!!!!!!");
     // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
     // for form inputs)
     /*if(window.cordova && window.cordova.plugins.Keyboard) {
@@ -25,28 +23,31 @@ app.run(function($ionicPlatform, $rootScope) {
 
     if (navigator.geolocation) {
       console.log("Getting Position...");
-        navigator.geolocation.getCurrentPosition(function(position){
-          console.log("Got Pos!");
-          var geocoder = new google.maps.Geocoder();
-          var latLng = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
-          geocoder.geocode({'latLng': latLng}, function(result, status){
+      navigator.geolocation.getCurrentPosition(function(position){
+        console.log("Got Pos!");
+        var geocoder = new google.maps.Geocoder();
+        var latLng = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
+        geocoder.geocode({'latLng': latLng}, function(result, status){
+          $rootScope.$apply(function(){
             if(status === google.maps.GeocoderStatus.OK){
-              $rootScope.$apply(function(){
-                console.log(result[0].formatted_address);
-                $rootScope.position = result[0].formatted_address;
-              });
+              console.log(result[0].formatted_address);
+              $rootScope.position = result[0].formatted_address;
+            } else if (status === google.maps.GeocoderStatus.ERROR){
+              console.log("Error retreiving Address from API");
+              $rootScope.position = "Beschreiben Sie ihre Position";
             }
           });
-        })
+        });
+      });
     } else {
-        console.log("Geolocation is not supported by this browser.");
+      console.log("Geolocation is not supported by this browser.");
     }
   });
 
 });
 
 app.config(function($stateProvider, $urlRouterProvider) {
-  $urlRouterProvider.otherwise('/')
+  $urlRouterProvider.otherwise('/');
 
   $stateProvider
     .state('consciousness', {
