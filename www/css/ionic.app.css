@@ -7920,7 +7920,7 @@ img {
 .image-wrapper {
   background-image: url("../img/compression-bg.png");
   position: relative;
-  padding-top: 40px;
+  padding-top: 36px;
   margin: 0; }
   .image-wrapper > img {
     display: block; }
@@ -7961,7 +7961,7 @@ img {
   border-color: #a4310b; }
 
 .instruction {
-  padding: 48px 24px;
+  padding: 42px 24px;
   font-size: 24px;
   border-top: 3px solid #6f6f6f; }
 
