@@ -7923,7 +7923,7 @@ img {
 .image-wrapper {
   background-image: url("../img/compression-bg.png");
   position: relative;
-  padding-top: 40px;
+  padding-top: 24px;
   margin: 0; }
   .image-wrapper > img {
     display: block; }
@@ -7967,7 +7967,7 @@ img {
   border-top: 20px solid #545454;
   font-size: 20px;
   font-weight: 400;
-  line-height: 24px;
+  line-height: 1.42857;
   padding: 30px 24px; }
   .instruction div {
     text-transform: upp; }
@@ -7976,3 +7976,6 @@ img {
   padding: 24px;
   font-size: 20px;
   border-top: 3px solid #6f6f6f; }
+
+.ion-content {
+  padding-bottom: 127px; }
