@@ -15,7 +15,38 @@ body, .pane, .modal {
 }
 
 .about-container {
+  a, a:hover, a:visited, a:link, a:active {
+    color: lighten(#F15A24, 10%);
+    font-size: 14px;
+    text-decoration: none;
+  }
+
   ul {
+    font-size: 20px;
+    margin-bottom: 30px;
+    margin-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+
+    li {
+      margin-bottom: 2px;
+    }
+  }
+
+  .description {
+    border-top: 2px solid #777;
+    padding: 30px 10px;
+    text-align: center;
+
+    a {
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    p {
+      color: #eee;
+      font-size: 16px;
+    }
   }
 }
 

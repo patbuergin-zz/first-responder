@@ -7823,6 +7823,29 @@ body, .pane, .modal {
   font-size: 20px;
   line-height: 30px; }
 
+.about-container a, .about-container a:hover, .about-container a:visited, .about-container a:link, .about-container a:active {
+  color: #f47c54;
+  font-size: 14px;
+  text-decoration: none; }
+.about-container ul {
+  font-size: 20px;
+  margin-bottom: 30px;
+  margin-top: 10px;
+  padding-left: 10px;
+  padding-right: 10px; }
+  .about-container ul li {
+    margin-bottom: 2px; }
+.about-container .description {
+  border-top: 2px solid #777;
+  padding: 30px 10px;
+  text-align: center; }
+  .about-container .description a {
+    font-size: 18px;
+    font-weight: bold; }
+  .about-container .description p {
+    color: #eee;
+    font-size: 16px; }
+
 .bar-fr {
   background-color: #6f6f6f;
   color: #fff;
