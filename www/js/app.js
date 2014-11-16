@@ -7,6 +7,10 @@ var app = angular.module('starter', ['ionic']);
 
 app.run(function($ionicPlatform, $rootScope) {
 
+  if (window.innerHeight/window.innerWidth < 1.67) {
+    document.body.classList.add('short');
+  }
+
   $rootScope.position  = null;
 
   $rootScope.countdownStartTime = null;
