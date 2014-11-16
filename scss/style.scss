@@ -28,11 +28,20 @@ body, .pane {
   position: fixed;
   width: 100%;
   text-transform: uppercase;
+
   a {
     margin: 0;
     width: 50%;
     border-radius: 0;
   }
+
+  a::before {
+    display: block;
+    font-size: 40px;
+    top: 24px;
+    position: relative;
+  }
+
   a.single {
     width: 100%;
   }

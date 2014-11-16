@@ -7845,6 +7845,11 @@ body, .pane {
     margin: 0;
     width: 50%;
     border-radius: 0; }
+  .button-footer a::before {
+    display: block;
+    font-size: 40px;
+    top: 24px;
+    position: relative; }
   .button-footer a.single {
     width: 100%; }
 
