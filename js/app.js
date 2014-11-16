@@ -18,7 +18,7 @@ app.run(function($ionicPlatform, $rootScope) {
       cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true);
     }*/
     if(window.StatusBar) {
-      StatusBar.styleDefault();
+      StatusBar.style(1);
     }
 
     if (navigator.geolocation) {
