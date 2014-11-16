@@ -7815,10 +7815,28 @@ $ios-transition-box-shadow-end: -200px 0px 200px rgba(0,0,0,0.15), -5px 0px 5px 
   -webkit-transition: none !important;
   transition: none !important; }
 
+body, .pane {
+  background-color: #454545;
+  color: #fff; }
+
+.bar-fr {
+  background-color: #6f6f6f;
+  color: #fff;
+  font-weight: bold;
+  border-bottom: 4px solid #454545;
+  background-image: none; }
+  .bar-fr h1 {
+    color: #fff;
+    font-weight: bold;
+    text-transform: uppercase; }
+  .bar-fr .button {
+    color: #fff; }
+
 .button-footer {
   bottom: 0;
   position: fixed;
-  width: 100%; }
+  width: 100%;
+  text-transform: uppercase; }
   .button-footer a {
     margin: 0;
     width: 50%;
@@ -7858,3 +7876,16 @@ img {
     text-transform: uppercase;
     position: absolute;
     padding-top: 20px; }
+
+.image-wrapper {
+  background-image: url("../img/compression-bg.png");
+  position: relative;
+  padding-top: 40px;
+  margin: 0; }
+  .image-wrapper > img {
+    display: block; }
+
+.instruction {
+  padding: 48px 24px;
+  font-size: 24px;
+  border-top: 3px solid #6f6f6f; }
