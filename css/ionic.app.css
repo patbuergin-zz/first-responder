@@ -7815,11 +7815,11 @@ $ios-transition-box-shadow-end: -200px 0px 200px rgba(0,0,0,0.15), -5px 0px 5px 
   -webkit-transition: none !important;
   transition: none !important; }
 
-body, .pane {
+body, .pane, .modal {
   background-color: #454545;
   color: #fff; }
 
-.bar .button.ion-home:before {
+.bar .button.ion-home:before, .bar .button.ion-chevron-left:before, .bar .button.ion-information:before, .bar .button.ion-close:before {
   font-size: 24px;
   line-height: 30px; }
 
@@ -7837,23 +7837,75 @@ body, .pane {
     color: #fff; }
 
 .button-footer {
+  border-top: 4px solid #383838;
   bottom: 0;
   position: fixed;
   width: 100%;
   text-transform: uppercase; }
   .button-footer a {
+    border-top-width: 6px;
     margin: 0;
     width: 50%;
     border-radius: 0; }
+  .button-footer a::before {
+    display: block;
+    font-size: 38px;
+    top: 20px;
+    position: relative; }
   .button-footer a.single {
     width: 100%; }
 
 h1, h2, h3, h4, h5, h6 {
   color: white; }
 
+h4 {
+  margin-top: 24px;
+  text-align: center; }
+
+.card {
+  border-bottom: 6px solid #ccc;
+  border-radius: 0;
+  padding: 6px 10px; }
+  .card.list i {
+    font-size: 24px; }
+    .card.list i.ion-android-hand {
+      font-size: 20px; }
+  .card.list .item {
+    border: none;
+    border-bottom: 2px solid #e2e2e2;
+    margin: 0; }
+  .card.list .item:last-child {
+    border: none; }
+  .card .row {
+    border-bottom: 2px solid #e2e2e2;
+    padding-top: 10px; }
+    .card .row div.col-25 {
+      font-weight: bold; }
+    .card .row div.col-75 ul {
+      padding-left: 16px; }
+      .card .row div.col-75 ul li {
+        list-style-type: circle; }
+  .card .row:last-child {
+    border-bottom: none; }
+
+ion-content.padding {
+  padding: 10px 20px; }
+
 div.disclaimer-text {
   color: #6f6f6f;
-  font-size: 10px; }
+  font-size: 8px; }
+
+.button.button-balanced {
+  border-bottom-width: 6px;
+  font-size: 24px;
+  font-weight: 700;
+  margin-left: -10px;
+  margin-right: -10px; }
+  .button.button-balanced::before {
+    font-size: 28px;
+    position: relative;
+    padding-right: 3px;
+    top: 2px; }
 
 .button-xlarge {
   padding: 0 16px;
@@ -7879,7 +7931,7 @@ img {
 .image-wrapper {
   background-image: url("../img/compression-bg.png");
   position: relative;
-  padding-top: 40px;
+  padding-top: 24px;
   margin: 0; }
   .image-wrapper > img {
     display: block; }
@@ -7889,7 +7941,6 @@ img {
     padding-top: 80px; }
   .image-wrapper .wrapper-caption {
     height: 80px;
-    line-height: 40px;
     background: #454545;
     text-align: center;
     line-height: 80px;
@@ -7920,11 +7971,28 @@ img {
   border-color: #a4310b; }
 
 .instruction {
-  padding: 48px 24px;
-  font-size: 24px;
-  border-top: 3px solid #6f6f6f; }
+  border-top: 20px solid #545454;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.42857;
+  padding: 30px 24px; }
+  .instruction div {
+    text-transform: upp; }
 
 .instruction-small {
   padding: 24px;
   font-size: 20px;
   border-top: 3px solid #6f6f6f; }
+
+.short .instruction {
+  padding: 24px;
+  border-top: 3px solid #545454; }
+.short .instruction-small {
+  padding: 16px;
+  font-size: 17px; }
+.short .image-wrapper.xtra-padding {
+  padding-top: 40px; }
+.short .image-wrapper .wrapper-caption {
+  height: 40px;
+  line-height: 40px;
+  font-size: 17px; }

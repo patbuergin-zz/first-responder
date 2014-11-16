@@ -7,6 +7,10 @@ var app = angular.module('starter', ['ionic']);
 
 app.run(function($ionicPlatform, $rootScope) {
 
+  if (window.innerHeight/window.innerWidth < 1.67) {
+    document.body.classList.add('short');
+  }
+
   $rootScope.position  = null;
 
   $rootScope.countdownStartTime = null;
@@ -54,6 +58,10 @@ app.config(function($stateProvider, $urlRouterProvider) {
       url: '/',
       templateUrl: 'templates/consciousness.html'
     })
+    .state('info', {
+      url: '/info',
+      templateUrl: 'templates/info.html'
+    })
     .state('shake', {
       url: '/shake',
       templateUrl: 'templates/shake.html'
@@ -77,9 +85,55 @@ app.config(function($stateProvider, $urlRouterProvider) {
     .state('compression-guide', {
       url: '/compression-guide',
       templateUrl: 'templates/compression-guide.html'
+    })
+    .state('lateral', {
+      url: '/lateral',
+      templateUrl: 'templates/lateral.html'
+    })
+    .state('unconscious', {
+      url: '/unconscious',
+      templateUrl: 'templates/unconscious.html'
+    })
+    .state('awake', {
+      url: '/awake',
+      templateUrl: 'templates/awake.html'
+    })
+    .state('responsive', {
+      url: '/responsive',
+      templateUrl: 'templates/responsive.html'
     });
 });
 
+app.controller('ConsciousnessController', function($scope, $ionicNavBarDelegate, $rootScope, $ionicModal) {
+  console.log("In consciouscont");
+  $ionicModal.fromTemplateUrl('templates/info.html', {
+    scope: $scope,
+    animation: 'slide-in-up'
+  }).then(function(modal) {
+    $scope.modal = modal;
+    console.log("In consciouscont modal");
+
+  });
+  $scope.openModal = function() {
+    $scope.modal.show();
+  };
+  $scope.closeModal = function() {
+    $scope.modal.hide();
+  };
+  //Cleanup the modal when we're done with it!
+  $scope.$on('$destroy', function() {
+    $scope.modal.remove();
+  });
+  // Execute action on hide modal
+  $scope.$on('modal.hidden', function() {
+    // Execute action
+  });
+  // Execute action on remove modal
+  $scope.$on('modal.removed', function() {
+    // Execute action
+  });
+
+});
 
 app.controller('SOSController', function($scope, $ionicNavBarDelegate, $rootScope) {
   console.log("In SosController");
@@ -89,6 +143,11 @@ app.controller('SOSController', function($scope, $ionicNavBarDelegate, $rootScop
 app.controller('CompressionController', function($scope, $ionicNavBarDelegate, $rootScope) {
   console.log("In CanvasController");
   $rootScope.countdownStartTime = Date.now();
+
+});
+
+app.controller('LateralController', function($scope, $ionicNavBarDelegate, $rootScope) {
+  console.log("In LateralController");
 
 });
 
