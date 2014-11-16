@@ -7837,6 +7837,7 @@ body, .pane, .modal {
     color: #fff; }
 
 .button-footer {
+  border-top: 4px solid #383838;
   bottom: 0;
   position: fixed;
   width: 100%;
@@ -7865,6 +7866,8 @@ h4 {
   border-bottom: 6px solid #ccc;
   border-radius: 0;
   padding: 6px 10px; }
+  .card.list .item {
+    border: 0; }
   .card .row {
     border-bottom: 2px solid #e2e2e2;
     padding-top: 10px; }
@@ -7961,9 +7964,13 @@ img {
   border-color: #a4310b; }
 
 .instruction {
-  padding: 48px 24px;
-  font-size: 24px;
-  border-top: 3px solid #6f6f6f; }
+  border-top: 20px solid #545454;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 24px;
+  padding: 30px 24px; }
+  .instruction div {
+    text-transform: upp; }
 
 .instruction-small {
   padding: 24px;

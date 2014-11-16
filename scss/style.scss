@@ -1,5 +1,8 @@
+$bgcolor: #454545;
+$bgcolor-light: #6f6f6f;
+
 body, .pane, .modal {
-  background-color: #454545;
+  background-color: $bgcolor;
   color: #fff;
 }
 
@@ -12,10 +15,10 @@ body, .pane, .modal {
 }
 
 .bar-fr {
-  background-color: #6f6f6f;
+  background-color: $bgcolor-light;
   color: #fff;
   font-weight: bold;
-  border-bottom: 4px solid #454545;
+  border-bottom: 4px solid $bgcolor;
   background-image: none;
   h1 {
     color: #fff;
@@ -27,6 +30,7 @@ body, .pane, .modal {
   }
 }
 .button-footer {
+  border-top: 4px solid darken($bgcolor, 5%);
   bottom: 0;
   position: fixed;
   width: 100%;
@@ -64,6 +68,10 @@ h4 {
   border-bottom: 6px solid #ccc;
   border-radius: 0;
   padding: 6px 10px;
+
+  &.list .item {
+    border: 0;
+  }
 
   .row {
     border-bottom: 2px solid #e2e2e2;
@@ -193,9 +201,15 @@ audio {
 }
 
 .instruction {
-  padding: 48px 24px;
-  font-size: 24px;
-  border-top: 3px solid #6f6f6f;
+  border-top: 20px solid lighten($bgcolor, 6%);
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 24px;
+  padding: 30px 24px;
+
+  div {
+    text-transform: upp;
+  }
 }
 
 .instruction-small{
