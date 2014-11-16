@@ -97,6 +97,9 @@ app.config(function($stateProvider, $urlRouterProvider) {
 });
 
 
+app.controller('ConsciousnessController', function($scope, $ionicNavBarDelegate, $rootScope) {
+
+});
 app.controller('SOSController', function($scope, $ionicNavBarDelegate, $rootScope) {
   console.log("In SosController");
 

@@ -7819,7 +7819,7 @@ body, .pane {
   background-color: #454545;
   color: #fff; }
 
-.bar .button.ion-home:before {
+.bar .button.ion-home:before, .bar .button.ion-chevron-left:before {
   font-size: 24px;
   line-height: 30px; }
 
