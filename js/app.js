@@ -105,14 +105,11 @@ app.config(function($stateProvider, $urlRouterProvider) {
 });
 
 app.controller('ConsciousnessController', function($scope, $ionicNavBarDelegate, $rootScope, $ionicModal) {
-  console.log("In consciouscont");
   $ionicModal.fromTemplateUrl('templates/info.html', {
     scope: $scope,
     animation: 'slide-in-up'
   }).then(function(modal) {
     $scope.modal = modal;
-    console.log("In consciouscont modal");
-
   });
   $scope.openModal = function() {
     $scope.modal.show();
