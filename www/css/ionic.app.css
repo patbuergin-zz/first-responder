@@ -7857,12 +7857,32 @@ body, .pane {
 h1, h2, h3, h4, h5, h6 {
   color: white; }
 
+h4 {
+  margin-top: 24px;
+  text-align: center; }
+
+.card {
+  border-bottom: 6px solid #ccc;
+  border-radius: 0;
+  padding: 6px 10px; }
+  .card .row {
+    border-bottom: 2px solid #e2e2e2;
+    padding-top: 10px; }
+    .card .row div.col-25 {
+      font-weight: bold; }
+    .card .row div.col-75 ul {
+      padding-left: 16px; }
+      .card .row div.col-75 ul li {
+        list-style-type: circle; }
+  .card .row:last-child {
+    border-bottom: none; }
+
 ion-content.padding {
   padding: 10px 20px; }
 
 div.disclaimer-text {
   color: #6f6f6f;
-  font-size: 10px; }
+  font-size: 8px; }
 
 .button.button-balanced {
   border-bottom-width: 6px;
