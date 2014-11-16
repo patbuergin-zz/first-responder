@@ -245,6 +245,10 @@ h5 {
   border-top: 3px solid #6f6f6f;
 }
 
+.scroll > *:last-child {
+  margin-bottom: 127px;
+}
+
 .short {
   .instruction {
     padding: 24px;
@@ -264,4 +268,8 @@ h5 {
       font-size: 17px;
     }
   }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> d41d6f087bc743912f9266110b8d97e3e52dd451

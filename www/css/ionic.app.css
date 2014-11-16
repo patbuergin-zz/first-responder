@@ -7995,6 +7995,9 @@ h5 {
   font-size: 20px;
   border-top: 3px solid #6f6f6f; }
 
+.scroll > *:last-child {
+  margin-bottom: 127px; }
+
 .short .instruction {
   padding: 24px;
   border-top: 3px solid #545454; }
