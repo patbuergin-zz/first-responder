@@ -7857,9 +7857,24 @@ body, .pane, .modal {
 h1, h2, h3, h4, h5, h6 {
   color: white; }
 
+ion-content.padding {
+  padding: 10px 20px; }
+
 div.disclaimer-text {
   color: #6f6f6f;
   font-size: 10px; }
+
+.button.button-balanced {
+  border-bottom-width: 6px;
+  font-size: 24px;
+  font-weight: 700;
+  margin-left: -10px;
+  margin-right: -10px; }
+  .button.button-balanced::before {
+    font-size: 28px;
+    position: relative;
+    padding-right: 3px;
+    top: 2px; }
 
 .button-xlarge {
   padding: 0 16px;
