@@ -178,7 +178,6 @@ audio {
   }
   .wrapper-caption {
     height: 80px;
-    line-height: 40px;
     background: #454545;
     text-align: center;
     line-height: 80px;
@@ -232,9 +231,26 @@ audio {
   padding: 24px;
   font-size: 20px;
   border-top: 3px solid #6f6f6f;
-
 }
 
-.ion-content {
-  padding-bottom: 127px;
+.short {
+  .instruction {
+    padding: 24px;
+    border-top: 3px solid lighten($bgcolor, 6%);
+  }
+  .instruction-small{
+    padding: 16px;
+    font-size: 17px;
+  }
+  .image-wrapper {
+    &.xtra-padding{
+      padding-top: 40px;
+    }
+    .wrapper-caption {
+      height: 40px;
+      line-height: 40px;
+      font-size: 17px;
+    }
+  }
+
 }
