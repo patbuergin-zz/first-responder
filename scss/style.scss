@@ -69,8 +69,24 @@ h4 {
   border-radius: 0;
   padding: 6px 10px;
 
-  &.list .item {
-    border: 0;
+  &.list {
+    i {
+      font-size: 24px;
+
+      &.ion-android-hand {
+        font-size: 20px;
+      }
+    }
+
+    .item {
+      border: none;
+      border-bottom: 2px solid #e2e2e2;
+      margin: 0;
+    }
+
+    .item:last-child {
+      border: none;
+    }
   }
 
   .row {

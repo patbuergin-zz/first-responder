@@ -7866,8 +7866,16 @@ h4 {
   border-bottom: 6px solid #ccc;
   border-radius: 0;
   padding: 6px 10px; }
+  .card.list i {
+    font-size: 24px; }
+    .card.list i.ion-android-hand {
+      font-size: 20px; }
   .card.list .item {
-    border: 0; }
+    border: none;
+    border-bottom: 2px solid #e2e2e2;
+    margin: 0; }
+  .card.list .item:last-child {
+    border: none; }
   .card .row {
     border-bottom: 2px solid #e2e2e2;
     padding-top: 10px; }
