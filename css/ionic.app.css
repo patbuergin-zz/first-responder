@@ -7820,7 +7820,7 @@ body, .pane, .modal {
   color: #fff; }
 
 .bar .button.ion-home:before, .bar .button.ion-chevron-left:before, .bar .button.ion-information:before, .bar .button.ion-close:before {
-  font-size: 24px;
+  font-size: 20px;
   line-height: 30px; }
 
 .bar-fr {
