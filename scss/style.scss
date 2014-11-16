@@ -148,19 +148,29 @@ div.disclaimer-text{
 
 audio {
   display: none;
-  }
+}
 
-  img{
-    width:100%;
-  }
+img {
+  width: 100%;
+}
 
-  .countdown-timer{
-    width:100%;
-    position: absolute;
-    top: 50px;
-    text-align: center;
-    font-size: 40px;
-  }
+h5 {
+  position: absolute;
+  top: 60px;
+  text-transform: uppercase;
+  text-align: center;
+  width: 100%;
+  font-size: 12px;
+}
+
+.countdown-timer{
+  width:100%;
+  position: absolute;
+  top: 100px;
+  text-align: center;
+  font-size: 48px;
+  font-weight: bold;
+}
 
 .image-wrapper {
   background-image: url("../img/compression-bg.png");
@@ -183,6 +193,8 @@ audio {
     line-height: 80px;
     width: 100%;
     font-size: 20px;
+    font-weight: 700;
+    border-bottom: 12px solid $bgcolor-light;
   }
 }
 
@@ -256,4 +268,8 @@ audio {
       font-size: 17px;
     }
   }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> d41d6f087bc743912f9266110b8d97e3e52dd451
